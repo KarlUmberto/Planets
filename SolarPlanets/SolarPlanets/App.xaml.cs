@@ -5,6 +5,7 @@ using Windows.Graphics;
 #endif
 
 
+
 namespace SolarPlanets;
 
 public partial class App : Application
@@ -31,6 +32,6 @@ public partial class App : Application
 
 
 
-		MainPage = new AppShell();
+		MainPage = new NavigationPage(new StartPage());
 	}
 }
