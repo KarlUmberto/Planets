@@ -50,6 +50,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\pluuto.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Folder Include="Resources\Fonts\" />
 	</ItemGroup>
 
