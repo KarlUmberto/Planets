@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Models
+namespace SolarPlanets.Models
 {
     public class Planet
     {
@@ -15,5 +15,26 @@ namespace Models
         public Microsoft.Maui.Graphics.Color AccentColorEnd { get; set; }
 
         public List<string> Images { get; set; }
+        
+        //Background
+        public Brush Backrgound
+        {
+            get
+            {
+                var gradientStops = new GradientStopCollection();
+                gradientStops.Add(new GradientStop(AccentColorStart, 0.0f));
+               gradientStops.Add(new GradientStop(AccentColorEnd, 1.0f));
+
+                var bgBrush = new LinearGradientBrush(gradientStops,
+                    new Point(0.0, 0.0),
+                    new Point(1.0, 1.0));
+
+                return bgBrush;
+
+            }
+        }
     }
+
+
+    
 }
