@@ -1,5 +1,6 @@
 using Microsoft.Maui.Controls;
 using Services;
+using SolarPlanets.Views;
 
 namespace Views;
 
@@ -9,12 +10,12 @@ public partial class PlanetsPage : ContentPage
 	public PlanetsPage()
 	{
 		InitializeComponent();
-        lstPopularPlanets.ItemsSource = PlanetsSevice.GetFeaturedPlanets();
+        lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
 	}
 
-	async void Planets_SelecetionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+	async void Planets_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
 	{
-		//await Navigation.PushAsync(new PlanetDetailsPage(e.CurrentSelection.First() as Planet));
+		await Navigation.PushAsync(new PlanetDetailsPage(e.CurrentSelection.First() as Planet));
 	}
 	async void GridArea_Tapped(System.Object sender, System.EventArgs e)
 	{
