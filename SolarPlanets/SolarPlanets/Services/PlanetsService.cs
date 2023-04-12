@@ -138,12 +138,96 @@ namespace Services
                     "https://solarsystem.nasa.gov/system/feature_items/images/84_neptune_carousel_2.jpg"
                 }
             },
+
+            new()
+            {
+                Name = " Pluto",
+                Subtitle = "  The forgotten one",
+                HeroImage = "pluto.jpg",
+                Description = "Neptune is the eighth planet from the Sun and the farthest known planet in the Solar System. It is the fourth-largest planet in the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, and slightly more massive than its near-twin Uranus.",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Pluto_via_New_Horizons_%28composite%29.jpeg/1200px-Pluto_via_New_Horizons_%28composite%29.jpeg",
+                    "https://www.iau.org/static/archives/images/screen/iau1502a.jpg",
+                    "https://i.insider.com/560568b0bd86ef12008bd085?width=1200&format=jpeg"
+                }
+            },
+
+            new()
+            {
+                Name = " ",
+                Subtitle = "  ",
+                HeroImage = ".png",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                    ""
+                }
+            },
+
+            new()
+            {
+                Name = " ",
+                Subtitle = "  ",
+                HeroImage = ".png",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                    ""
+                }
+            },
+
+            new()
+            {
+                Name = " ",
+                Subtitle = "  ",
+                HeroImage = ".png",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                    ""
+                }
+            },
+
+            new()
+            {
+                Name = " ",
+                Subtitle = "  ",
+                HeroImage = ".png",
+                Description = "",
+                AccentColorStart = Color.FromArgb("#0c293d"),
+                AccentColorEnd = Color.FromArgb("#26abe0"),
+                Images = new()
+                {
+                    "",
+                    "",
+                    ""
+                }
+            },
         };
+
+        public static List<Planet> GetAllPlanets()
+            => planets;
+
 
         public static List<Planet> GetFeaturedPlanets()
         {
             var rnd = new Random();
-            var randomizedPlanets = planets.OrderBy(ItemDelegateList => rnd.Next());
+            var randomizedPlanets = planets.OrderBy(item => rnd.Next());
 
             return randomizedPlanets.Take(2).ToList();
         }

@@ -17,7 +17,7 @@ namespace SolarPlanets.Models
         public List<string> Images { get; set; }
         
         //Background
-        public Brush Backrgound
+        public Brush Background
         {
             get
             {

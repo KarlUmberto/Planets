@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <!--Colors-->
-    <Color x:Key="FrameBackroundColor">#F1EFF0</Color>
+    <Color x:Key="FrameBackgroundColor">#F1EFF0</Color>
     <Color x:Key="BorderColor">Transparent</Color>
     <Color x:Key="DarkTextColor">#252525</Color>
     <Color x:Key="ButtonBackgroundColor">#EB5757</Color>

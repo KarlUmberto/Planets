@@ -6,6 +6,9 @@ using Windows.Graphics;
 
 
 
+using SolarPlanets.Views;
+
+
 namespace SolarPlanets;
 
 public partial class App : Application
